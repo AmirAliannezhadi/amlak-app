@@ -26,12 +26,18 @@ export async function POST(req) {
     }
 
     const hashedPassword = await hashPassword(password);
-    const newKarbar = await Karbar.create({ email: email, password: hashedPassword });
+    const newKarbar = await Karbar.create({
+      email: email,
+      password: hashedPassword,
+    });
     console.log(newKarbar);
 
-    return NextResponse.json({
-      message: "حساب کاربری ایجاد شد",
-    });
+    return NextResponse.json(
+      {
+        message: "حساب کاربری ایجاد شد",
+      },
+      { status: 201 }
+    );
   } catch (error) {
     console.log(error);
     return NextResponse.json(
