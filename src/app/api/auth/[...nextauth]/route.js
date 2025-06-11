@@ -4,7 +4,7 @@ import Karbar from "@/models/Karbar";
 import { verifyPassword } from "src/utils/auth";
 import connectDB from "src/utils/connectDB";
 
-const authOptions = {
+export const authOptions = {
   session: { strategy: "jwt" },
   providers: [
     CredentialsProvider({
