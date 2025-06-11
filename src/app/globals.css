@@ -10,7 +10,7 @@ body {
   max-width: 1200px;
   overflow-x: hidden;
   margin: auto;
-  pad: 0 10px;
+  padding: 0 10px;
 }
 
 a {

@@ -1,8 +1,7 @@
+import DashboardSidebar from "@/layout/DashboardSidebar";
 
-function DashboardLayout({children}) {
-  return (
-    <div>{children}</div>
-  )
+function DashboardLayout({ children }) {
+  return <DashboardSidebar>{children}</DashboardSidebar>;
 }
 
-export default DashboardLayout
+export default DashboardLayout;
