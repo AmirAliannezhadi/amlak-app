@@ -1,7 +1,8 @@
+import DashboardPage from "@/template/DashboardPage"
 
 function Dashboard() {
   return (
-    <div>Dashboard</div>
+    <DashboardPage />
   )
 }
 
