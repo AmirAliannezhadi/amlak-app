@@ -5,7 +5,6 @@ import { redirect } from "next/navigation";
 
 async function signin() {
   const session = await getServerSession(authOptions);
-  console.log(session);
   if (session) {
     redirect("/")
   }

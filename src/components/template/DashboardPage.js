@@ -1,13 +1,14 @@
 import styles from "@/template/DashboardPage.module.css"
 
-function DashboardPage() {
+function DashboardPage({createdAt}) {
+  console.log(createdAt);
   return (
     <div className={styles.container}>
       <h3>سلام ✋</h3>
       <p>آگهی های خود را ثبت کنید تا هزاران نفر آن را مشاهده کنند </p>
       <div className={styles.createdAt}>
         <p>تاریخ عضویت: </p>
-        <span>123123</span>
+        <span>{new Date(createdAt).toLocaleDateString("fa-IR")}</span>
       </div>
     </div>
   )

@@ -30,8 +30,7 @@ function SignupPage() {
       headers: { "Content-Type": "application/json" },
     });
     const data = await res.json();
-    console.log(data);
-    console.log(res.status);
+  
 
     setLoading(false);
 

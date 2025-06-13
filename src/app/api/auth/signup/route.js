@@ -7,7 +7,7 @@ export async function POST(req) {
   try {
     await connectDB();
     const { email, password } = await req.json();
-    console.log({ email, password });
+   
 
     if (!email || !password) {
       return NextResponse.json(
@@ -17,7 +17,7 @@ export async function POST(req) {
     }
 
     const existingUser = await Karbar.findOne({ email });
-    console.log(existingUser);
+
     if (existingUser) {
       return NextResponse.json(
         { error: "این کاربر قبلا ثبت نام کرده است" },
@@ -30,7 +30,7 @@ export async function POST(req) {
       email: email,
       password: hashedPassword,
     });
-    console.log(newKarbar);
+
 
     return NextResponse.json(
       {

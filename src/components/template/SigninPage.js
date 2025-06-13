@@ -24,7 +24,7 @@ function SigninPage() {
       password,
       redirect: false,
     });
-    console.log(res);
+  
 
     setLoading(false);
 
